@@ -21,10 +21,15 @@ source ~/.bashrc  # 或 ~/.zshrc
 
 ### 2. 初始化 skill 环境
 
+**先切换到本 skill 的目录**，然后初始化：
+
 ```bash
-cd ~/.agents/skills/bilibili-subtitle
+# 进入 skill 目录（根据你的安装位置调整）
+cd <skill目录>
 pixi install  # 安装 Python 依赖
 ```
+
+> skill 目录位置：`~/.agents/skills/bilibili-subtitle` 或 `~/.claude/skills/bilibili-subtitle`
 
 ### 3. 安装外部工具
 
@@ -55,7 +60,7 @@ BBDown logined  # 查看登录状态
 **⚠️ 重要：所有命令必须在 skill 目录下运行，并确保 PATH 包含 pixi 和 BBDown**
 
 ```bash
-cd ~/.agents/skills/bilibili-subtitle
+cd <skill目录>
 export PATH="$HOME/.pixi/bin:$HOME/.local/bin:$PATH"
 ```
 
@@ -203,9 +208,9 @@ output/
 如果上述前置依赖都未安装，可运行一键安装脚本：
 
 ```bash
-cd ~/.agents/skills/bilibili-subtitle
+cd <skill目录>
 ./install.sh  # 会尝试安装 pixi + Python 依赖 + BBDown
-BBDown login  # 扫码登录
+BBDown login  # 扫码登录，已登录则跳过
 ```
 
 ## 详细文档
