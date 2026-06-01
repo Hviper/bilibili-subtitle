@@ -39,11 +39,15 @@ chmod +x ~/.local/bin/BBDown
 BBDown login  # 扫码登录
 ```
 
-### 4. 验证环境
+### 4. 登录 B站（首次使用时）
 
 ```bash
-cd ~/.agents/skills/bilibili-subtitle
-pixi run python -m bilibili_subtitle --check
+BBDown login  # 扫码登录，已登录则跳过
+```
+
+**检测是否已登录**：
+```bash
+BBDown logined  # 查看登录状态
 ```
 
 ## Quick Reference
